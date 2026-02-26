@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #ffffff;
+}
+
+.app {
+  width: 95%;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2b3a5a;
+  outline: none;
+  background: #111a2f;
+  color: #fff;
+}
+
+.search button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+}
+
+.search button:hover {
+  opacity: 0.9;
+}
+
+.message {
+  margin: 10px 0 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #111a2f;
+  border: 1px solid #2b3a5a;
+  min-height: 44px;
+}
+
+.weather-box {
+  padding: 16px;
+  border-radius: 14px;
+  background: #111a2f;
+  border: 1px solid #2b3a5a;
+  margin-bottom: 18px;
+}
+
+.weather-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.weather-main img {
+  width: 64px;
+  height: 64px;
+}
+
+.weather-city {
+  font-size: 22px;
+  margin: 0;
+}
+
+.weather-desc {
+  margin: 4px 0 0;
+  opacity: 0.9;
+}
+
+.weather-temp {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.sub-title {
+  margin: 10px 0 10px;
+  font-size: 20px;
+}
+
+/* Forecast grid */
+.forecast-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.forecast-card {
+  background: #111a2f;
+  border: 1px solid #2b3a5a;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-3px);
+}
+
+.forecast-day {
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.forecast-card img {
+  width: 52px;
+  height: 52px;
+}
+
+.forecast-temp {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.forecast-desc {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .forecast-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .forecast-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
